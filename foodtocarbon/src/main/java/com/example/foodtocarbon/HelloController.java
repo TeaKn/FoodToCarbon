@@ -30,10 +30,10 @@ public class HelloController {
 
             System.out.println(food);
             System.out.println(q);
-            String s="";
+            StringBuilder s= new StringBuilder();
             for (String f: food) {
                 System.out.println(f);
-                s += "food=" + f + "&";
+                s.append("food=").append(f).append("&");
             }
             System.out.println(s);
 
