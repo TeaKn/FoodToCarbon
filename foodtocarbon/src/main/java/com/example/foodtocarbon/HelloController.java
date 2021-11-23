@@ -39,7 +39,7 @@ public class HelloController {
 
             Map<String, String> map1 = IntStream.range(0, food.size())
                     .boxed()
-                    .collect(Collectors.toMap(i -> food.get(i), i -> q.get(i)));
+                    .collect(Collectors.toMap(food::get, q::get));
 
             System.out.println(map1);
 
