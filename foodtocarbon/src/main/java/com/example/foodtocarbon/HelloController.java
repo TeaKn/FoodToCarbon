@@ -51,15 +51,14 @@ public class HelloController {
             System.out.println(result);
 
             JsonParser springParser = JsonParserFactory.getJsonParser();
-            List < Object > list = springParser.parseList(result);
+            List <Object> list = springParser.parseList(result);
             for (Object o: list) {
                 if (o instanceof Map) {
-                    Map < String, String > map = (Map < String, String > ) o;
+                    Map <String, String> map = (Map <String, String>) o;
                     System.out.println(map.get("food"));
                     System.out.println(map.get("value"));
                     System.out.println(map1.get(map.get("food")));
                     food_emision += Float.parseFloat(map.get("value")) * Float.parseFloat(map1.get(map.get("food")));
-                    int i = 0;
                 }
             }
 
